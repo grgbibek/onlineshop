@@ -28,6 +28,9 @@
 	
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- bootstrap readble-theme CSS -->
+    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -35,32 +38,34 @@
   </head>
 
   <body>
-
+	<div class="wrapper">
     <!-- Navigation -->
     <%@include file="./shared/navbar.jsp" %>
 
     <!-- Page Content -->
-    <!-- Home -->
-    <c:if test="${userClickHome==true}">
-    <%@include file="home.jsp" %>
-    </c:if>
-    
-    <!-- About -->
-    <c:if test="${userClickAbout==true}">
-    <%@include file="about.jsp" %>
-    </c:if>
-    
-    <!-- listProducts -->
-    <c:if test="${userClickListProducts==true}">
-    <%@include file="listProducts.jsp" %>
-    </c:if>
-    
-    <!-- contact -->
-    <c:if test="${userClickContact==true}">
-    <%@include file="contact.jsp" %>
-    </c:if>
+    <div class="content">
+	    <!-- Home -->
+	    <c:if test="${userClickHome==true}">
+	    <%@include file="home.jsp" %>
+	    </c:if>
+	    
+	    <!-- About -->
+	    <c:if test="${userClickAbout==true}">
+	    <%@include file="about.jsp" %>
+	    </c:if>
+	    
+	    <!-- listProducts -->
+	    <c:if test="${userClickListProducts==true}">
+	    <%@include file="listProducts.jsp" %>
+	    </c:if>
+	    
+	    <!-- contact -->
+	    <c:if test="${userClickContact==true}">
+	    <%@include file="contact.jsp" %>
+	    </c:if>
+    </div>
     <!-- /.container -->
-
+	<div class="clear"></div>
     <!-- Footer -->
     <%@include file="./shared/footer.jsp" %>
 
@@ -68,9 +73,11 @@
     <script src="${js}/jquery.min.js"></script>
     <script src="${js}/bootstrap.bundle.min.js"></script>
     
+
+    
     <!-- custom JS -->
 	 <script src="${js}/myapp.js"></script> 
-
+	</div>
   </body>
 
 </html>
